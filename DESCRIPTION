@@ -1,0 +1,22 @@
+Package: mlComp
+Title: Machine Learning competitions and challenges in R
+Version: 0.0.0.9000
+Authors@R: person("Janek", "Thomas", email = "janek.thomas@stat.uni-muenchen.de", role = c("aut", "cre"))
+Description: Machine Learning competitions and challenges in R. Create 'mlr' learner to achive
+    performance values on 'OpenML' tasks. Users can set difficulty level and time limit.
+Depends:
+    R (>= 3.4.4),
+    mlr (>= 2.12),
+    OpenML
+Imports:
+    BBmisc,
+    R6,
+    checkmate
+Suggests:
+    testthat,
+    rpart,
+    farff
+License: BSD_2_clause + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
