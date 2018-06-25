@@ -9,7 +9,8 @@
 Challenge
 }
 \description{
-Create a Machine Learning challenge objects that the should solve in a given time limit.
+Create a Machine Learning challenge objects that should be solved in a given time limit.
+Currently only classification tasks with accuracy as performance are supported.
 }
 \section{Usage}{
 

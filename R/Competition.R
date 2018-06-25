@@ -1,6 +1,7 @@
 #' Machine Learning Challenge.
 #'
-#' Create a Machine Learning challenge objects that the should solve in a given time limit.
+#' Create a Machine Learning challenge objects that should be solved in a given time limit.
+#' Currently only classification tasks with accuracy as performance are supported.
 #'
 #' @format \code{\link{R6Class}} object.
 #' @name Challenge
@@ -69,9 +70,9 @@ Challenge = R6::R6Class("Challenge",
 
       if (is.null(id) | id == "daily") {
         task.ids = listOMLTasks(tag = "OpenML-CC18")$task.id
-        if (is.null(id)) {
+        if (is.null(id)) { #random
           id = sample(task.ids, 1)
-        } else {
+        } else { #daily
           id = task.ids[as.numeric(Sys.Date()) %% length(task.ids)]
         }
       }
