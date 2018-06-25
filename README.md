@@ -20,6 +20,13 @@ library(mlComp)
 chall = Challenge$new(id = 3, difficulty = "very easy", time.limit = 3600)
 lrn = makeLearner("classif.rpart")
 chall$submit(lrn)
+
+# random challenge (From OpenML-CC18)
+chall.rand = Challenge$new(difficulty = "very easy", time.limit = 3600)
+
+# daily challenge
+chall.rand = Challenge$new("daily", difficulty = "very easy", time.limit = 3600)
+
 ```
 
 # Data Preprocessing
