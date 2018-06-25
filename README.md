@@ -16,7 +16,7 @@ Machine Learning competitions and challenges in R. Create [mlr](https://github.c
 Users can set difficulty level and time limit.
 
 ```splus
-library(mlrComp)
+library(mlComp)
 chall = Challenge$new(id = 3, difficulty = "very easy", time.limit = 3600)
 lrn = makeLearner("classif.rpart")
 chall$submit(lrn)
@@ -27,7 +27,7 @@ chall$submit(lrn)
 The dataset can not be changed by the user, but preprocessing can be done via [mlrCPO](https://github.com/mlr-org/mlrCPO)
 
 ```splus
-library(mlrComp)
+library(mlComp)
 library(mlrCPO)
 chall = Challenge$new(id = 3, difficulty = "very easy", time.limit = 3600)
 lrn = cpoModelMatrix(~ 0 + .^2) %>>%  # interactions
